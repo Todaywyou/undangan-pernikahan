@@ -1,0 +1,147 @@
+/* =============================
+   SECTION
+============================= */
+.wanita-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 20px;
+  background: #2b0f12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.wanita-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================
+   BUNGA
+============================= */
+.flower-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.flower {
+  position: absolute;
+  top: -15%;
+  width: 40px;
+  opacity: 0.25;
+  animation: flowerFall linear infinite;
+  filter: blur(1.2px);
+}
+
+@keyframes flowerFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% { opacity: 0.3; }
+  80% {
+    transform: translateY(85vh) rotate(240deg);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(130vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* =============================
+   TEKS PEMBUKA
+============================= */
+.intro-text {
+  text-align: center;
+  max-width: 700px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.intro-text h2 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.intro-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* =============================
+   PASANGAN
+============================= */
+.couple-block {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* FOTO */
+.couple-photo {
+  width: 320px;
+  height: 420px;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.4);
+}
+
+.couple-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEKS */
+.couple-text h3 {
+  font-size: 26px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 6px;
+}
+
+.couple-text p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* =============================
+   MOBILE (HP)
+============================= */
+@media (max-width: 768px) {
+
+  .couple-block {
+    grid-template-columns: 1fr auto; /* TETAP 2 KOLOM */
+    gap: 24px;
+  }
+
+  .couple-photo {
+    width: 160px;   /* FOTO DIKECILKAN */
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .couple-text h3 {
+    font-size: 30px;
+  }
+
+  .couple-text p {
+    font-size: 15px;
+  }
+}

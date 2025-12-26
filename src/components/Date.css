@@ -1,0 +1,133 @@
+/* =============================
+   SAVE THE DATE
+============================= */
+.date-section {
+  background: #2b0f12;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.date-content {
+  max-width: 620px;
+}
+
+/* SAVE THE DATE */
+.date-sub {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  opacity: 0.85;
+  display: block;
+  margin-bottom: 26px;
+}
+
+/* DESKRIPSI */
+.date-desc {
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.9;
+  margin-bottom: 50px;
+}
+
+/* CARD */
+.date-card {
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 26px;
+  padding: 44px 24px;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.05);
+}
+
+/* AKAD */
+.date-label {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+  display: block;
+}
+
+/* HARI */
+.date-day {
+  font-size: 16px;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+/* TANGGAL */
+.date-number {
+  font-size: 64px;
+  font-family: "Playfair Display", serif;
+  margin: 6px 0;
+}
+
+/* BULAN */
+.date-month {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+/* JAM */
+.date-time {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+/* LOKASI */
+.date-location {
+  font-size: 13px;
+  line-height: 1.8;
+  opacity: 0.85;
+  margin-bottom: 28px;
+}
+
+/* BUTTON MAPS */
+.date-btn {
+  display: inline-block;
+  padding: 12px 34px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.date-btn:hover {
+  background: #fff;
+  color: #2b0f12;
+}
+
+/* =============================
+   RESPONSIVE HP
+============================= */
+@media (max-width: 768px) {
+
+  .date-section {
+    padding: 90px 16px;
+  }
+
+  .date-number {
+    font-size: 48px;
+  }
+
+  .date-label {
+    font-size: 18px;
+  }
+
+  .date-desc {
+    font-size: 13px;
+  }
+
+  .date-location {
+    font-size: 12px;
+  }
+}
