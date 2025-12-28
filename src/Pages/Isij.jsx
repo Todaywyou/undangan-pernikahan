@@ -4,6 +4,7 @@ import Date from "../components/Date";
 import Foto from "../components/Foto";
 import Resepsi from "../components/Resepsi";
 import Our from "../components/Our";
+import Bank from "../components/Bank";
 
 
 export default function Isi() {
@@ -16,6 +17,7 @@ export default function Isi() {
           <Date />
           <Foto />
           <Resepsi/>
+          <Bank/>
           <Our/>
         </div>
       </section>
