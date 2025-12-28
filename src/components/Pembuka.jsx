@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAudio } from "../AudioContext";
 
 const images = ["/bgose1.jpeg", "/bgose2.jpeg", "/bgose5.jpeg", "/bgose4.jpeg"];
 
 const Pembuka = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const { playMusic } = useAudio();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,14 +29,15 @@ const Pembuka = () => {
         </h1>
       </div>
 
-      <div className="relative z-15 mb-20">
+      <div className="relative z-10 mb-20">
         <p className="text-white text-lg font-semibold">
-          Kepada Yth. Bapak/ibu/sdr/i
+          Kepada Yth. Bapak/Ibu/Sdr/i
         </p>
 
         <Link
           to="/isi"
-          className="inline-block bg-black/65 text-white px-9 py-3 rounded-full shadow-md"
+          onClick={playMusic}
+          className="inline-block bg-black/65 text-white px-9 py-3 rounded-full shadow-md mt-6"
         >
           Open Invitation
         </Link>
