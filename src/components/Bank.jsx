@@ -59,7 +59,7 @@ export default function Bank() {
           <div className="bank-footer">
             <div>
               <small>Atas Nama</small>
-              <p>M. Adi Kusno</p>
+              <p>Munajid</p>
             </div>
 
             <button

@@ -18,7 +18,7 @@ const Awal = () => {
           Karsih & Munajid
         </h2>
         <p className="text-lg md:text-xl font-light tracking-wide">
-          11 Januari 2025
+          11 Januari 2026
         </p>
       </div>
 

@@ -7,8 +7,11 @@
 
 .ucapan-section h2 {
   font-family: "Playfair Display", serif;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
+  font-size: clamp(28px, 6vw, 40px);
+
 }
+
 
 .ucapan-line {
   width: 60px;
