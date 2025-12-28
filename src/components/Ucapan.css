@@ -1,0 +1,59 @@
+.ucapan-section {
+  padding: 110px 20px;
+  background: linear-gradient(to bottom, #2b0f14, #120406);
+  color: #fff;
+  text-align: center;
+}
+
+.ucapan-section h2 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+}
+
+.ucapan-line {
+  width: 60px;
+  height: 2px;
+  background: #d4af37;
+  margin: 14px auto 40px;
+}
+
+.ucapan-form {
+  max-width: 520px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ucapan-form input,
+.ucapan-form textarea {
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: rgba(255,255,255,.1);
+  color: #fff;
+}
+
+.ucapan-form button {
+  background: #d4af37;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ucapan-list {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ucapan-card {
+  background: rgba(255,255,255,.08);
+  padding: 18px;
+  border-radius: 18px;
+  text-align: left;
+}
