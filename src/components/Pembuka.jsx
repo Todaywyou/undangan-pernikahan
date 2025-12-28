@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useAudio } from "../AudioContext";
 
 const images = ["/bgose1.jpeg", "/bgose2.jpeg", "/bgose5.jpeg", "/bgose4.jpeg"];
@@ -7,6 +7,10 @@ const images = ["/bgose1.jpeg", "/bgose2.jpeg", "/bgose5.jpeg", "/bgose4.jpeg"];
 const Pembuka = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const { playMusic } = useAudio();
+  const [searchParams] = useSearchParams();
+
+  // ambil nama dari URL
+  const namaUndangan = searchParams.get("to");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,8 +34,12 @@ const Pembuka = () => {
       </div>
 
       <div className="relative z-10 mb-20">
-        <p className="text-white text-lg font-semibold">
-          Kepada Yth. Bapak/Ibu/Sdr/i
+        <p className="text-white text-lg font-semibold">Kepada Yth.</p>
+
+        <p className="text-white text-xl font-serif mt-2">
+          {namaUndangan
+            ? decodeURIComponent(namaUndangan)
+            : "Bapak / Ibu / Saudara/i"}
         </p>
 
         <Link
