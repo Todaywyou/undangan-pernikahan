@@ -5,6 +5,7 @@ import Foto from "../components/Foto";
 import Resepsi from "../components/Resepsi";
 import Our from "../components/Our";
 import Bank from "../components/Bank";
+import Ucapan from "../components/Ucapan";
 
 
 export default function Isi() {
@@ -18,6 +19,7 @@ export default function Isi() {
           <Foto />
           <Resepsi/>
           <Bank/>
+          <Ucapan/>
           <Our/>
         </div>
       </section>
