@@ -67,7 +67,7 @@ export default function Perempuan() {
 
         <div className="couple-text">
           <h3>Munajid</h3>
-          <p>Putra dari Bapak Jayak & Ibu Munah</p>
+          <p>Putra dari Bapak Jayak(ALM)& Ibu Munah</p>
         </div>
       </div>
     </section>

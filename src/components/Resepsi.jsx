@@ -12,7 +12,7 @@ export default function Resepsi() {
           <h3 className="resepsi-month">Januari 2026</h3>
 
           <p className="resepsi-time">
-            Pukul 11:00 WIB <br /> s/d selesai
+            Pukul 10:00 WIB <br /> s/d selesai
           </p>
 
           <p className="resepsi-location">

@@ -20,7 +20,7 @@ export default function Date() {
           <h3 className="date-month">Januari 2026</h3>
 
           <p className="date-time">
-            Pukul 10:00 WIB <br /> s/d selesai
+            Pukul 07:30 WIB <br /> s/d selesai
           </p>
 
           {/* LOKASI */}
