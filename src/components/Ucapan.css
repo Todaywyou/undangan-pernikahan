@@ -57,3 +57,34 @@
   border-radius: 18px;
   text-align: left;
 }
+
+.ucapan-card p {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.ucapan-pesan {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* ✅ tambahkan ini */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* pesan full */
+.ucapan-pesan.expanded {
+  -webkit-line-clamp: unset;
+  line-clamp: unset; /* ✅ tambahkan ini juga */
+}
+
+
+/* tombol selengkapnya */
+.ucapan-toggle {
+  margin-top: 6px;
+  background: none;
+  border: none;
+  color: #d4af37;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}

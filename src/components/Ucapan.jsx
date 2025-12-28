@@ -14,6 +14,7 @@ export default function Ucapan() {
   const [nama, setNama] = useState("");
   const [pesan, setPesan] = useState("");
   const [ucapan, setUcapan] = useState([]);
+  const [expanded, setExpanded] = useState({});
 
   useEffect(() => {
     const q = query(collection(db, "ucapan"), orderBy("createdAt", "desc"));
@@ -44,6 +45,13 @@ export default function Ucapan() {
     setPesan("");
   };
 
+  const toggleExpand = (id) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   return (
     <section className="ucapan-section">
       <h2>Ucapan & Doa</h2>
@@ -65,12 +73,29 @@ export default function Ucapan() {
       </form>
 
       <div className="ucapan-list">
-        {ucapan.map((u) => (
-          <div key={u.id} className="ucapan-card">
-            <strong>{u.nama}</strong>
-            <p>{u.pesan}</p>
-          </div>
-        ))}
+        {ucapan.map((u) => {
+          const isExpanded = expanded[u.id];
+          const isLong = u.pesan.length > 120;
+
+          return (
+            <div key={u.id} className="ucapan-card">
+              <strong>{u.nama}</strong>
+
+              <p className={`ucapan-pesan ${isExpanded ? "expanded" : ""}`}>
+                {u.pesan}
+              </p>
+
+              {isLong && (
+                <button
+                  className="ucapan-toggle"
+                  onClick={() => toggleExpand(u.id)}
+                >
+                  {isExpanded ? "Lebih sedikit" : "Selengkapnya"}
+                </button>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
